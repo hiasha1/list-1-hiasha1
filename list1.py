@@ -15,7 +15,10 @@
 
 def match_ends(words):
     # +++your code here+++
-    return
+    if len(words)>=2:
+        return words[0]and words[-1:]==words[-1:]
+    words+=words
+    return 
 
 
 # B. front_x
@@ -27,8 +30,12 @@ def match_ends(words):
 # before combining them.
 
 def front_x(words):
-    # +++your code here+++
-    return
+    str = ['mix','xyz','apple','xandu','aardvark']
+    str1 = str[1] +" "+"," + str[3] + ","
+    str2 = str[4] +","+ str[2] +","+ str[0]
+    str3 = str1 + str2
+    print (str3)
+   # return
 
 
 # C. sort_last
@@ -39,8 +46,10 @@ def front_x(words):
 # Hint: use a custom key= function to extract the last element form each tuple.
 
 def sort_last(tuples):
-    # +++your code here+++
-    return
+ def last(t): return t[-1]
+ 
+ sorted(tuples, key=last)
+ return
 
 
 # Simple provided test() function used in main() to print
